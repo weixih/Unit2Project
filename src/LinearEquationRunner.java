@@ -11,10 +11,10 @@ public class LinearEquationRunner {
         System.out.print("Enter coordinate 2: ");
         String coord2 = scan.nextLine();
 
-        int x1 = Integer.parseInt(coord1.substring(coord1.indexOf("(")+1, coord1.indexOf(",")+1));
-        int y1 = Integer.parseInt(coord1.substring(coord1.indexOf(" ")+1, coord1.indexOf(")")+1));
-        int x2 = Integer.parseInt(coord2.substring(coord2.indexOf("(")+1, coord2.indexOf(",")+1));
-        int y2 = Integer.parseInt(coord2.substring(coord2.indexOf(" ")+1, coord2.indexOf(")")+1));
+        int x1 = Integer.parseInt(coord1.substring(coord1.indexOf("(")+1, coord1.indexOf(",")));
+        int y1 = Integer.parseInt(coord1.substring(coord1.indexOf(" ")+1, coord1.indexOf(")")));
+        int x2 = Integer.parseInt(coord2.substring(coord2.indexOf("(")+1, coord2.indexOf(",")));
+        int y2 = Integer.parseInt(coord2.substring(coord2.indexOf(" ")+1, coord2.indexOf(")")));
 
         System.out.println();
 
