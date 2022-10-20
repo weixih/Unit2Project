@@ -28,12 +28,24 @@ public class LinearEquation {
     public String equation(){
         int top = y2 - y1;
         int bottom = x2 - x1;
+        String yIntercept =  String.valueOf(yIntercept());
+        if (yIntercept() >0){
+            yIntercept = "+ "+ yIntercept;
+        }
+        if (top == bottom){
+            return "y = x "+ yIntercept();
+        }
+        if (top <0 && bottom <0){
+            return "y = "+Math.abs(top)+"/"+Math.abs(bottom)+"x "+ yIntercept;
+        }else if (bottom < 0){
+            return "y = -"+top+"/"+bottom+"x "+yIntercept;
+        }
         if(top == 0){
-            return "y = " + yIntercept();
+            return "y = " + yIntercept;
         }else if(bottom ==0){
             return "x = " + x2;
         }
-        return "y = " + top +"/"+bottom + "x + " + yIntercept();
+        return "y = " + top +"/"+bottom + "x " + yIntercept;
     }
 
     public String coordinateForX(double xValue){

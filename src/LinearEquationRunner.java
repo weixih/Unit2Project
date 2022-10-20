@@ -19,6 +19,10 @@ public class LinearEquationRunner {
 
         System.out.println(equation.lineInfo());
 
+        System.out.print("Enter a value for x: ");
+        double xValue = scan.nextDouble();
+        LinearEquation.coordinateForX(xValue);
+
 
 
 
