@@ -16,9 +16,6 @@ public class LinearEquation {
     }
 
     public double slope(){
-        if (x2 - x1 == 0){
-            return 999999999;
-        }
         return roundedToHundredth((double)(y2-y1)/(x2-x1));
     }
     public double yIntercept(){
@@ -28,24 +25,8 @@ public class LinearEquation {
     public String equation(){
         int top = y2 - y1;
         int bottom = x2 - x1;
-        String yIntercept =  String.valueOf(yIntercept());
-        if (yIntercept() >0){
-            yIntercept = "+ "+ yIntercept;
-        }
-        if (top == bottom){
-            return "y = x "+ yIntercept();
-        }
-        if (top <0 && bottom <0){
-            return "y = "+Math.abs(top)+"/"+Math.abs(bottom)+"x "+ yIntercept;
-        }else if (bottom < 0){
-            return "y = -"+top+"/"+bottom+"x "+yIntercept;
-        }
-        if(top == 0){
-            return "y = " + yIntercept;
-        }else if(bottom ==0){
-            return "x = " + x2;
-        }
-        return "y = " + top +"/"+bottom + "x " + yIntercept;
+
+
     }
 
     public String coordinateForX(double xValue){
@@ -54,14 +35,11 @@ public class LinearEquation {
         return "(" + x + ", " + y + ")";
     }
 
-    public double roundedToHundredth(double number){
-        return (double)Math.round(number*100)/100;
+    public double roundedToHundredth(double toRound){
+        return (double)Math.round(toRound*100)/100;
     }
 
     public String lineInfo(){
-        if (slope() == 999999999){
-            return "The two points are: "+"("+x1+", "+y1+") and ("+x2+", "+y2+")\nThe equation of the line between these points is: "+equation()+"\nThe slope of this line is: undefined"+"\nThe y-intercept of the line is: none" + "\nThe distance between the two points is: "+distance();
-        }
         return "The two points are: "+"("+x1+", "+y1+") and ("+x2+", "+y2+")\nThe equation of the line between these points is: "+equation()+"\nThe slope of this line is: "+slope()+"\nThe y-intercept of the line is: "+yIntercept()+"\nThe distance between the two points is: "+distance();
     }
 }
