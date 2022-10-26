@@ -18,7 +18,7 @@ public class LinearEquationRunner {
 
         //checks for vertical line then stops if it is
         if(x1 == x2){
-            System.out.println("The line is vertical.\nx = "+x1);
+            System.out.println("The points are on a vertical line: x = "+x1);
         }
 
         //if it is not a vertical line it continues
@@ -31,7 +31,7 @@ public class LinearEquationRunner {
             //finding the y value given an x value
             System.out.print("Enter a value for x: ");
             double xValue = scan.nextDouble();
-            System.out.println(equation.coordinateForX(xValue));
+            System.out.println("The point on the line is: " + equation.coordinateForX(xValue));
         }
     }
 }
