@@ -23,7 +23,6 @@ public class LinearEquationRunner {
 
         //if it is not a vertical line it continues
         else {
-
             LinearEquation equation = new LinearEquation(x1, y1, x2, y2);
 
             System.out.println(equation.lineInfo());
